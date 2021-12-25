@@ -1,0 +1,15 @@
+useEffect(() =>{
+
+        const getGeneralNews = async() => {
+            const req = await axios.get()
+            .then((res) =>{console.log(res)})
+            .catch((e) =>{
+                console.log(e.message)
+            })
+            
+            //setGeneralnews(req.data.results[Math.floor(Math.random() * req.data.results.length)]);
+            return req;
+        }
+
+        getGeneralNews();
+    }, []);

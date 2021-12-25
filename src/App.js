@@ -1,40 +1,41 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./components/style.css";
 import "aos/dist/aos.css";
 import Home from "./pages/Home";
 import AOS from "aos";
-import notFound from "./pages/notFound";
+import notFound from "./pages/NotFound";
 import Article from "./pages/Article";
 import Politics from "./pages/Politics";
-import Posts from "./components/Posts";
 import Addnews from "./components/Addnews";
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useStatevalue } from "./Redux/context";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import Login from "./components/Login";
 
 
 function App() {
-  const [{ user }, dispatch] = useStatevalue();
 
   useEffect(() => {
     AOS.init({});
     AOS.refresh();
   }, []);
 
-
-
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>} />
+       
+      <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>} />
         <Route path="/article/:id" element={<Article/>} />
         <Route path="/politics" element={<Politics/>} />
-        <Route path="/submitArticle" element={<Addnews/>} />
-        <Route element={notFound} />
-      </Routes>
-    </Router>
+        <Route path="/submitArticle" path="/submitArticle" element={<Addnews/>} />
+        <Route path="*" element={notFound} />
+       
+  </Routes> 
+    </BrowserRouter>
   );
 }
 

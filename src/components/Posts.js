@@ -10,15 +10,16 @@ const Posts = () => {
   useEffect(() => {
     const fetchNews = async () => {
       await axios.get(request.general).then((response) =>
-        dispatch({
-          type: "SET_BLOGDATA",
-          payload: response.data.articles,
-        })
+      dispatch({
+        type: "SET_BLOGDATA",
+        payload: response.data.results,
+      })
+       
       );
     };
 
     fetchNews();
-  }, []);
+  }, [request.general]);
 
   return (
     <div className="post_list text-center">

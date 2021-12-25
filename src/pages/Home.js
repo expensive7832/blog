@@ -7,22 +7,23 @@ import Login from "../components/Login";
 import { useStatevalue } from "../Redux/context";
 
 const Home = () => {
+  const [{ user }, dispatch] = useStatevalue();
 
-    const [{ user }, dispatch] = useStatevalue();
-  
   return (
-    <React.Fragment>
+    <>
       {!user ? (
         <Login />
       ) : (
-        <div className="home">
+        <>
           <Nav />
           <Hero />
+          
           <Outlist />
           <Footer />
-        </div>
+      
+        </>
       )}
-    </React.Fragment>
+    </>
   );
 };
 

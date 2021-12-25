@@ -12,7 +12,7 @@ const Hero = () => {
 
         const getGeneralNews = async() => {
             const req = await axios.get(request.general);
-            setGeneralnews(req.data.articles[Math.floor(Math.random() * req.data.articles.length)]);
+            setGeneralnews(req.data.results[Math.floor(Math.random() * req.data.results.length)]);
             return req;
         }
 
@@ -20,7 +20,7 @@ const Hero = () => {
     }, []);
 
     const heroBackground = {
-        backgroundImage : `url(${Generalnews.urlToImage ? Generalnews.urlToImage : placeholderheroImg} )`,
+        backgroundImage : `url(${Generalnews.image_url ? Generalnews.image_url : placeholderheroImg} )`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",

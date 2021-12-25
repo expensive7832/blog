@@ -57,6 +57,20 @@ const Addnews = () => {
             ></textarea>
             <label Htmlfor="floatingTextarea2">Article</label>
           </div>
+
+          <div class="mb-3">
+            <label Htmlfor="title" className="form-label">
+              Select Image
+            </label>
+            <input
+              type="file" 
+              className="form-control"
+              id="title"
+              value={Title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+
           <button type="submit" className="mt-3 btn btn-primary">
             Submit Post
           </button>

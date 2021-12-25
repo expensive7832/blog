@@ -1,14 +1,19 @@
-const API_KEY = "a0bc783c35df4e8fb3f78a585c56c213";
+const API_KEY = "pub_2497682d174c2cebe696e16d0d325d4810f5";
 
 const request = {
-    general: `https://newsapi.org/v2/top-headlines?country=ng&apiKey=${API_KEY}`,
-    business: `https://newsapi.org/v2/top-headlines?country=ng&category=business&apiKey=${API_KEY}`,
-    sports: `https://newsapi.org/v2/top-headlines?country=ng&category=sports&apiKey=${API_KEY}`,
-    entertainment: `https://newsapi.org/v2/top-headlines?country=ng&category=entertainment&apiKey=${API_KEY}`,
-    science: `https://newsapi.org/v2/top-headlines?country=ng&category=science&apiKey=${API_KEY}`,
-    health: `https://newsapi.org/v2/top-headlines?country=ng&category=generalhealth&apiKey=${API_KEY}`,
-    tech: `https://newsapi.org/v2/top-headlines?country=ng&category=technology&apiKey=${API_KEY}`,
-    politics: `https://newsapi.org/v2/top-headlines?country=ng&category=politics&apiKey=${API_KEY}`,
+    test: `https://google-news1.p.rapidapi.com/top-headlines/?rapidapi-key=1b73e796c3msh8a55e1c908f94b8p10eb8ajsnf5936f`,
+    general: `https://newsdata.io/api/1/news?apikey=${API_KEY}&language=en`,
+    business: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=business&language=en`,
+    sports: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=sports&language=en`,
+    entertainment: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=entertainment&language=en`,
+    science: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=science&language=en`,
+    health: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=health&language=en`,
+    tech: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=technology&language=en`,
+    politics: `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=politics&language=en`,
 }
 
 export default request;
+
+// general: `https://newsdata.io/api/1/news?apikey=${API_KEY}&country=ng`,
+
+//const API_KEY = "pub_2497682d174c2cebe696e16d0d325d4810f5";

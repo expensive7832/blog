@@ -90,7 +90,7 @@ function Outlist() {
             </div>
 
             <div className="card-body">
-              <div className="container w-75">
+              <div className="container-fluid">
                 <Posts/>
               </div>
             </div>

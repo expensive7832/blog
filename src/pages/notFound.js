@@ -1,6 +1,6 @@
 
 
-const notFound = () => {
+const NotFound = () => {
     return (
         <article style={{height: "100vh", backgroundColor: "whitesmoke"}}>
            <div className="position-relative text-center left-50 top-50">
@@ -11,4 +11,4 @@ const notFound = () => {
     )
 }
 
-export default notFound
+export default NotFound
