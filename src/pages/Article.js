@@ -18,7 +18,7 @@ const FetchId = () => {
     const res = localStorage.getItem("Id");
     return res.slice(1, 2); // coverting ls string data to number
   } else {
-    return {};
+    return "";
   }
 };
 const FetchData = () => {
@@ -35,7 +35,6 @@ const Article = () => {
   const { id } = useParams();
 
   const [ls, setLs] = useState(FetchId()); // ls - localstorage data
-  const [dataArr, setDataArr] = useState([]);
   const [singleData, setSingleData] = useState({});
 
  
@@ -48,9 +47,8 @@ const Article = () => {
 
   useEffect(() => {
     const fetchNews = async () => {
-      await axios
-        .get(request.general)
-        .then((response) => setSingleData(response.data.results[id]));
+      await axios.get(request?.general)
+        .then(({data}) => setSingleData(data?.articles[id]));
     };
 
     fetchNews();

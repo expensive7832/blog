@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import Posts from "./Posts";
 
 function Outlist() {
-  const [time, settime] = useState(new Date().toLocaleTimeString());
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
  useEffect(() => {
    setInterval(() => {
-     settime(new Date().toLocaleTimeString());
-   }, 10000);  
+     setTime(new Date().toLocaleTimeString());
+   }, 5000);  
 }, [])
 
   return (
